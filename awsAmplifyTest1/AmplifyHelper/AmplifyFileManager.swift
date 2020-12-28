@@ -48,4 +48,15 @@ class AmplifyStorage{
         }
 
     }
+    
+    func deleteData(key:String){
+        let sink = Amplify.Storage.remove(key: key).resultPublisher.sink { (received:Subscribers.Completion<StorageError>) in
+            if case let .failure(StorageError) = received{
+                print("Couldn't remove. Error: \(StorageError.errorDescription) \(StorageError.recoverySuggestion)")
+            }
+        } receiveValue: { (data:String) in
+            print("Deleted data \(data)")
+        }
+
+    }
 }
