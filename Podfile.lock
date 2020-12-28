@@ -1,0 +1,18 @@
+PODS:
+  - Amplify (1.5.2):
+    - Amplify/Default (= 1.5.2)
+  - Amplify/Default (1.5.2)
+
+DEPENDENCIES:
+  - Amplify
+
+SPEC REPOS:
+  trunk:
+    - Amplify
+
+SPEC CHECKSUMS:
+  Amplify: ab6311e55abba45613c3990e8233b5ffa965d556
+
+PODFILE CHECKSUM: 4adfce991a55c6a57acba2ef6c75344e84a0e575
+
+COCOAPODS: 1.10.0

@@ -1,0 +1,6 @@
+framework module Pods_awsAmplifyTest1_awsAmplifyTest1UITests {
+  umbrella header "Pods-awsAmplifyTest1-awsAmplifyTest1UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
