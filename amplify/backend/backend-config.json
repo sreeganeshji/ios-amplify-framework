@@ -1,1 +1,16 @@
-{}
+{
+  "auth": {
+    "awsamplifytest17a63b500": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  },
+  "storage": {
+    "GreenRecipesStorage": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
+  }
+}

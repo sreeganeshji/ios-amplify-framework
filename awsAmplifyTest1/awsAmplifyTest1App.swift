@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Amplify
+import AmplifyPlugins
 
 @main
 struct awsAmplifyTest1App: App {
@@ -15,6 +16,8 @@ struct awsAmplifyTest1App: App {
         
         do{
             Amplify.Logging.logLevel = .verbose
+            try Amplify.add(plugin: AWSCognitoAuthPlugin())
+            try Amplify.add(plugin: AWSS3StoragePlugin())
             try Amplify.configure()
         }
         catch{

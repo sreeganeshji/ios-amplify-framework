@@ -7,6 +7,8 @@ target 'awsAmplifyTest1' do
 
   # Pods for awsAmplifyTest1
   pod 'Amplify'
+  pod 'AmplifyPlugins/AWSS3StoragePlugin'
+  pod 'AmplifyPlugins/AWSCognitoAuthPlugin'
 
   target 'awsAmplifyTest1Tests' do
     inherit! :search_paths
