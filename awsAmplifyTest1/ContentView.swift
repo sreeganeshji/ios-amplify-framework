@@ -12,6 +12,7 @@ struct ContentView: View {
     @State var text:String = ""
     @State var received:String = ""
     var body: some View {
+        NavigationView{
         List{
             TextField("Write here", text: self.$text)
             Text(self.received)
@@ -21,6 +22,12 @@ struct ContentView: View {
             Button(action:download){
                 Text("Download")
             }
+            NavigationLink(destination:PhotosPicker())
+            {
+                Text("Picker")
+            }
+  
+        }
         }
     }
     

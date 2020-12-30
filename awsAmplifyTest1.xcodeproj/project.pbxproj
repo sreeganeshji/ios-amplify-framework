@@ -18,6 +18,8 @@
 		B1CD0C5325995B2F006CB647 /* awsAmplifyTest1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CD0C5225995B2F006CB647 /* awsAmplifyTest1UITests.swift */; };
 		B1CD0C7225995FF8006CB647 /* AmplifyFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CD0C7125995FF8006CB647 /* AmplifyFileManager.swift */; };
 		B1CD0C8A25996F4E006CB647 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CD0C8925996F4E006CB647 /* Data.swift */; };
+		B1CD0C9225999D98006CB647 /* ImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CD0C9125999D98006CB647 /* ImageHandler.swift */; };
+		B1D89C1E259BF3680052D511 /* phpicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D89C1D259BF3680052D511 /* phpicker.swift */; };
 		B704F3D0FC0837F692A1A898 /* Pods_awsAmplifyTest1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45AC5E7DB0D3758E9A5EC3AE /* Pods_awsAmplifyTest1Tests.framework */; };
 		D94511D830ED49E2804DB0C2 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 2FEFA773876643999A6DECC1 /* awsconfiguration.json */; };
 /* End PBXBuildFile section */
@@ -64,6 +66,8 @@
 		B1CD0C5425995B2F006CB647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1CD0C7125995FF8006CB647 /* AmplifyFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplifyFileManager.swift; sourceTree = "<group>"; };
 		B1CD0C8925996F4E006CB647 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		B1CD0C9125999D98006CB647 /* ImageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHandler.swift; sourceTree = "<group>"; };
+		B1D89C1D259BF3680052D511 /* phpicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = phpicker.swift; sourceTree = "<group>"; };
 		BB5761DAF9270F0091C655A8 /* Pods-awsAmplifyTest1-awsAmplifyTest1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-awsAmplifyTest1-awsAmplifyTest1UITests.debug.xcconfig"; path = "Target Support Files/Pods-awsAmplifyTest1-awsAmplifyTest1UITests/Pods-awsAmplifyTest1-awsAmplifyTest1UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7316C2DC5BEC6E796494383 /* Pods_awsAmplifyTest1_awsAmplifyTest1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_awsAmplifyTest1_awsAmplifyTest1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,8 +147,8 @@
 		B1CD0C3425995B2C006CB647 /* awsAmplifyTest1 */ = {
 			isa = PBXGroup;
 			children = (
+				B1D89C1C259BF35C0052D511 /* Picker */,
 				B1CD0C8825996F41006CB647 /* Data */,
-				B1CD0C7025995FC0006CB647 /* AmplifyHelper */,
 				B1CD0C3525995B2C006CB647 /* awsAmplifyTest1App.swift */,
 				B1CD0C3725995B2C006CB647 /* ContentView.swift */,
 				B1CD0C3925995B2F006CB647 /* Assets.xcassets */,
@@ -192,8 +196,18 @@
 			isa = PBXGroup;
 			children = (
 				B1CD0C8925996F4E006CB647 /* Data.swift */,
+				B1CD0C7025995FC0006CB647 /* AmplifyHelper */,
+				B1CD0C9125999D98006CB647 /* ImageHandler.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		B1D89C1C259BF35C0052D511 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				B1D89C1D259BF3680052D511 /* phpicker.swift */,
+			);
+			path = Picker;
 			sourceTree = "<group>";
 		};
 		FB2FE3AE0B3ADE0F8D035068 /* Pods */ = {
@@ -448,8 +462,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1CD0C9225999D98006CB647 /* ImageHandler.swift in Sources */,
 				B1CD0C3825995B2C006CB647 /* ContentView.swift in Sources */,
 				B1CD0C7225995FF8006CB647 /* AmplifyFileManager.swift in Sources */,
+				B1D89C1E259BF3680052D511 /* phpicker.swift in Sources */,
 				B1CD0C3625995B2C006CB647 /* awsAmplifyTest1App.swift in Sources */,
 				B1CD0C8A25996F4E006CB647 /* Data.swift in Sources */,
 			);
