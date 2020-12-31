@@ -12,6 +12,8 @@ import SwiftUI
 
 
 struct PhotosPicker:UIViewControllerRepresentable{
+    @Binding var isPresented:Bool
+    @Binding var Images:[UIImage]
     
     func makeUIViewController(context: Context) ->  PHPickerViewController {
         var configuration = PHPickerConfiguration()
@@ -24,7 +26,7 @@ struct PhotosPicker:UIViewControllerRepresentable{
         return controller
     }
     
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+    func updateUIViewController(_ uiViewController: PHPickerViewController, context: Context) {
         
     }
     
@@ -40,7 +42,26 @@ struct PhotosPicker:UIViewControllerRepresentable{
         }
         
         func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-            
+            parent.isPresented = false
+            for image in results{
+                if image.itemProvider.canLoadObject(ofClass: UIImage.self){
+                    image.itemProvider.loadObject(ofClass: UIImage.self) { (newImage:NSItemProviderReading?, error:Error?) in
+                        if let error = error{
+                            print("couldn't load images: \(error.localizedDescription)")
+                        }
+                        else{
+                            let image = newImage as! UIImage
+//                          print(image.configuration.)
+                            let compressedImage = image.jpegData(compressionQuality: 0.0000001)
+                            
+                            self.parent.Images.append(UIImage(data: compressedImage!)!)
+                        }
+                    }
+                }
+                else{
+                    print("The data is not image")
+                }
+            }
         }
         
     }

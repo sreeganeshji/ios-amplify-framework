@@ -10,5 +10,4 @@ import Foundation
 class DataModels:ObservableObject{
     var amplifyManager = AmplifyStorage()
 
-    var imageHandler = ImageHandler()
 }

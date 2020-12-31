@@ -9,8 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var data:DataModels
+    @State var images:[UIImage] = []
     @State var text:String = ""
     @State var received:String = ""
+    @State var addPhotosPresent:Bool = false
     var body: some View {
         NavigationView{
         List{
@@ -22,13 +24,24 @@ struct ContentView: View {
             Button(action:download){
                 Text("Download")
             }
-            NavigationLink(destination:PhotosPicker())
+            Button(action:{self.addPhotosPresent = true})
             {
-                Text("Picker")
+                Text("Add photos")
             }
-  
+            if(images.count>0){
+                NavigationLink(destination:
+                                ImageView(image: $images[0]))
+            {
+                Text("view photo")
+            }
+            }
+
         }
         }
+        .sheet(isPresented: self.$addPhotosPresent, content: {
+            PhotosPicker(isPresented: self.$addPhotosPresent, Images: self.$images)
+        })
+        
     }
     
     func upload(){
@@ -53,7 +66,6 @@ struct ContentView: View {
             self.received = String(data: data, encoding: .utf8) ?? "Couldn't update"
     
     }
-    
     
 }
 
